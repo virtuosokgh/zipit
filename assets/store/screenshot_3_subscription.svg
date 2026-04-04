@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EBF3FE"/>
+      <stop offset="100%" stop-color="#D6E6FD"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Top title -->
+  <text x="540" y="160" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">청약 일정을</text>
+  <text x="540" y="230" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">놓치지 마세요</text>
+
+  <!-- Phone frame -->
+  <rect x="90" y="320" width="900" height="1520" rx="48" ry="48" fill="#1a1a1a"/>
+  <rect x="102" y="332" width="876" height="1496" rx="40" ry="40" fill="white"/>
+
+  <!-- Status bar -->
+  <text x="160" y="382" font-family="SF Pro, Helvetica" font-size="28" font-weight="600" fill="#333">9:41</text>
+  <rect x="900" y="366" width="30" height="14" rx="3" fill="#333"/>
+
+  <!-- App header -->
+  <rect x="102" y="412" width="876" height="100" fill="white"/>
+  <text x="540" y="478" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="36" font-weight="700" fill="#222" text-anchor="middle">청약</text>
+
+  <!-- Filter tabs -->
+  <rect x="140" y="540" width="200" height="56" rx="28" fill="#2B4C7E"/>
+  <text x="240" y="576" font-family="Apple SD Gothic Neo" font-size="26" font-weight="600" fill="white" text-anchor="middle">진행중</text>
+  <rect x="360" y="540" width="200" height="56" rx="28" fill="#F0F0F0"/>
+  <text x="460" y="576" font-family="Apple SD Gothic Neo" font-size="26" fill="#666" text-anchor="middle">예정</text>
+  <rect x="580" y="540" width="200" height="56" rx="28" fill="#F0F0F0"/>
+  <text x="680" y="576" font-family="Apple SD Gothic Neo" font-size="26" fill="#666" text-anchor="middle">마감</text>
+
+  <!-- Subscription card 1 -->
+  <rect x="140" y="630" width="800" height="260" rx="20" fill="white" stroke="#E8E8E8" stroke-width="1.5"/>
+  <rect x="160" y="650" width="90" height="36" rx="18" fill="#E8F5E9"/>
+  <text x="205" y="676" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#2E7D32" text-anchor="middle">모집중</text>
+  <text x="270" y="676" font-family="Apple SD Gothic Neo" font-size="22" fill="#999">D-5</text>
+  <text x="180" y="730" font-family="Apple SD Gothic Neo" font-size="32" font-weight="700" fill="#222">힐스테이트 잠실</text>
+  <text x="180" y="770" font-family="Apple SD Gothic Neo" font-size="24" fill="#666">서울 송파구 · 아파트 · 총 820세대</text>
+  <rect x="160" y="795" width="760" height="1" fill="#F0F0F0"/>
+  <text x="180" y="835" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">접수기간</text>
+  <text x="350" y="835" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.03.21 ~ 2026.03.31</text>
+  <text x="180" y="870" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">당첨발표</text>
+  <text x="350" y="870" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.04.10</text>
+
+  <!-- Subscription card 2 -->
+  <rect x="140" y="920" width="800" height="260" rx="20" fill="white" stroke="#E8E8E8" stroke-width="1.5"/>
+  <rect x="160" y="940" width="90" height="36" rx="18" fill="#E8F5E9"/>
+  <text x="205" y="966" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#2E7D32" text-anchor="middle">모집중</text>
+  <text x="270" y="966" font-family="Apple SD Gothic Neo" font-size="22" fill="#999">D-12</text>
+  <text x="180" y="1020" font-family="Apple SD Gothic Neo" font-size="32" font-weight="700" fill="#222">DMC 파크뷰자이</text>
+  <text x="180" y="1060" font-family="Apple SD Gothic Neo" font-size="24" fill="#666">서울 마포구 · 아파트 · 총 1,250세대</text>
+  <rect x="160" y="1085" width="760" height="1" fill="#F0F0F0"/>
+  <text x="180" y="1125" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">접수기간</text>
+  <text x="350" y="1125" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.03.25 ~ 2026.04.07</text>
+  <text x="180" y="1160" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">당첨발표</text>
+  <text x="350" y="1160" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.04.18</text>
+
+  <!-- Subscription card 3 -->
+  <rect x="140" y="1210" width="800" height="260" rx="20" fill="white" stroke="#E8E8E8" stroke-width="1.5"/>
+  <rect x="160" y="1230" width="90" height="36" rx="18" fill="#FFF3E0"/>
+  <text x="205" y="1256" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#E65100" text-anchor="middle">예정</text>
+  <text x="270" y="1256" font-family="Apple SD Gothic Neo" font-size="22" fill="#999">D-20</text>
+  <text x="180" y="1310" font-family="Apple SD Gothic Neo" font-size="32" font-weight="700" fill="#222">래미안 원펜타스</text>
+  <text x="180" y="1350" font-family="Apple SD Gothic Neo" font-size="24" fill="#666">서울 서초구 · 아파트 · 총 641세대</text>
+  <rect x="160" y="1375" width="760" height="1" fill="#F0F0F0"/>
+  <text x="180" y="1415" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">접수기간</text>
+  <text x="350" y="1415" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.04.05 ~ 2026.04.15</text>
+  <text x="180" y="1450" font-family="Apple SD Gothic Neo" font-size="22" fill="#888">당첨발표</text>
+  <text x="350" y="1450" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#333">2026.04.25</text>
+
+  <!-- Bottom nav -->
+  <rect x="102" y="1688" width="876" height="140" fill="white"/>
+  <line x1="102" y1="1688" x2="978" y2="1688" stroke="#E8E8E8" stroke-width="1"/>
+  <circle cx="246" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="246" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">홈</text>
+  <circle cx="432" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="432" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">시세</text>
+  <circle cx="618" cy="1728" r="16" fill="#2B4C7E"/>
+  <text x="618" y="1776" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#2B4C7E" text-anchor="middle">청약</text>
+  <circle cx="804" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="804" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">설정</text>
+</svg>

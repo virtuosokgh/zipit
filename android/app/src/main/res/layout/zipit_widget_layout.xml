@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/widget_background">
+
+    <!-- 상단 라벨 -->
+    <TextView
+        android:id="@+id/region_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="최신 실거래"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp" />
+
+    <!-- 메인 값 -->
+    <TextView
+        android:id="@+id/avg_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+    <!-- 구분선 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1AFFFFFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- 실거래 1 -->
+    <LinearLayout
+        android:id="@+id/trade_row_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView
+            android:id="@+id/trade_name_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/trade_price_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3182F6"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="6dp" />
+        <TextView
+            android:id="@+id/trade_date_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- 실거래 2 -->
+    <LinearLayout
+        android:id="@+id/trade_row_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView
+            android:id="@+id/trade_name_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/trade_price_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3182F6"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="6dp" />
+        <TextView
+            android:id="@+id/trade_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- 실거래 3 -->
+    <LinearLayout
+        android:id="@+id/trade_row_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView
+            android:id="@+id/trade_name_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/trade_price_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3182F6"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="6dp" />
+        <TextView
+            android:id="@+id/trade_date_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- 실거래 4 -->
+    <LinearLayout
+        android:id="@+id/trade_row_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="3dp">
+        <TextView
+            android:id="@+id/trade_name_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/trade_price_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3182F6"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="6dp" />
+        <TextView
+            android:id="@+id/trade_date_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- 실거래 5 -->
+    <LinearLayout
+        android:id="@+id/trade_row_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/trade_name_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#CCCCCC"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+        <TextView
+            android:id="@+id/trade_price_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3182F6"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginStart="6dp" />
+        <TextView
+            android:id="@+id/trade_date_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="10sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+</LinearLayout>

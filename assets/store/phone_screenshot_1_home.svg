@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="#F9FAFB"/>
+
+  <!-- Status Bar -->
+  <rect width="1080" height="88" fill="#FFFFFF"/>
+  <text x="50" y="60" font-family="Arial" font-size="28" fill="#191F28">9:41</text>
+  <text x="930" y="60" font-family="Arial" font-size="24" fill="#191F28">100%</text>
+
+  <!-- AppBar -->
+  <rect y="88" width="1080" height="112" fill="#FFFFFF"/>
+  <text x="50" y="160" font-family="Arial" font-size="40" font-weight="bold" fill="#191F28">집잇</text>
+  <text x="980" y="160" font-family="Arial" font-size="36" fill="#8B95A1">🔔</text>
+
+  <!-- Body -->
+  <g transform="translate(40, 240)">
+    <!-- Greeting -->
+    <text x="0" y="40" font-family="Arial" font-size="40" font-weight="bold" fill="#191F28">안녕하세요, 사용자님!</text>
+    <text x="0" y="80" font-family="Arial" font-size="28" fill="#4E5968">오늘의 부동산 소식을 확인해보세요</text>
+
+    <!-- Contract Card -->
+    <rect x="0" y="120" width="1000" height="180" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <rect x="24" y="144" width="56" height="28" rx="14" fill="#3182F610"/>
+    <text x="36" y="164" font-family="Arial" font-size="20" fill="#3182F6">매매</text>
+    <text x="96" y="164" font-family="Arial" font-size="22" fill="#4E5968">계약진행중</text>
+    <text x="880" y="164" font-family="Arial" font-size="24" font-weight="bold" fill="#FF4545">D-5</text>
+    <text x="24" y="210" font-family="Arial" font-size="30" font-weight="bold" fill="#191F28">래미안 퍼스티지</text>
+    <text x="24" y="245" font-family="Arial" font-size="26" fill="#3182F6">24.5억</text>
+    <rect x="24" y="268" width="950" height="6" rx="3" fill="#E5E8EB"/>
+    <rect x="24" y="268" width="570" height="6" rx="3" fill="#3182F6"/>
+    <text x="920" y="282" font-family="Arial" font-size="20" fill="#8B95A1">3/5</text>
+
+    <!-- Latest Trades Header -->
+    <text x="0" y="380" font-family="Arial" font-size="34" font-weight="bold" fill="#191F28">서울 강남구 최신 실거래</text>
+    <rect x="760" y="354" width="240" height="40" rx="20" fill="#3182F610" stroke="#3182F630" stroke-width="1"/>
+    <text x="784" y="382" font-family="Arial" font-size="22" font-weight="600" fill="#3182F6">전체보기 ›</text>
+
+    <!-- Latest Trades Card -->
+    <rect x="0" y="410" width="1000" height="360" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+
+    <!-- Trade Item 1 -->
+    <text x="24" y="460" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">래미안 퍼스티지</text>
+    <text x="24" y="492" font-family="Arial" font-size="22" fill="#8B95A1">84㎡ · 15층 · 3/21</text>
+    <text x="820" y="470" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">24.5억</text>
+    <text x="970" y="470" font-family="Arial" font-size="24" fill="#D1D6DB">›</text>
+
+    <line x1="24" y1="515" x2="976" y2="515" stroke="#F2F4F6" stroke-width="1"/>
+
+    <!-- Trade Item 2 -->
+    <text x="24" y="555" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">반포자이</text>
+    <text x="24" y="587" font-family="Arial" font-size="22" fill="#8B95A1">59㎡ · 22층 · 3/20</text>
+    <text x="820" y="565" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">18.2억</text>
+    <text x="970" y="565" font-family="Arial" font-size="24" fill="#D1D6DB">›</text>
+
+    <line x1="24" y1="610" x2="976" y2="610" stroke="#F2F4F6" stroke-width="1"/>
+
+    <!-- Trade Item 3 -->
+    <text x="24" y="650" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">아크로리버파크</text>
+    <text x="24" y="682" font-family="Arial" font-size="22" fill="#8B95A1">114㎡ · 8층 · 3/19</text>
+    <text x="820" y="660" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">36.0억</text>
+    <text x="970" y="660" font-family="Arial" font-size="24" fill="#D1D6DB">›</text>
+
+    <line x1="24" y1="705" x2="976" y2="705" stroke="#F2F4F6" stroke-width="1"/>
+
+    <!-- Trade Item 4 -->
+    <text x="24" y="745" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">삼성 래미안</text>
+    <text x="24" y="777" font-family="Arial" font-size="22" fill="#8B95A1">84㎡ · 12층 · 3/18</text>
+    <text x="820" y="755" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">21.3억</text>
+    <text x="970" y="755" font-family="Arial" font-size="24" fill="#D1D6DB">›</text>
+
+    <!-- Subscription Header -->
+    <text x="0" y="860" font-family="Arial" font-size="34" font-weight="bold" fill="#191F28">다가오는 청약</text>
+    <rect x="830" y="834" width="170" height="40" rx="20" fill="#3182F610" stroke="#3182F630" stroke-width="1"/>
+    <text x="858" y="862" font-family="Arial" font-size="22" font-weight="600" fill="#3182F6">전체 ▾</text>
+
+    <!-- Subscription Card 1 -->
+    <rect x="0" y="890" width="1000" height="100" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <rect x="24" y="916" width="64" height="48" rx="10" fill="#FF454510"/>
+    <text x="36" y="946" font-family="Arial" font-size="22" font-weight="bold" fill="#FF4545">D-3</text>
+    <text x="112" y="938" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">힐스테이트 잠실</text>
+    <text x="112" y="968" font-family="Arial" font-size="22" fill="#8B95A1">서울 송파구 · 아파트</text>
+    <text x="960" y="950" font-family="Arial" font-size="26" fill="#B0B8C1">›</text>
+
+    <!-- Subscription Card 2 -->
+    <rect x="0" y="1005" width="1000" height="100" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <rect x="24" y="1031" width="64" height="48" rx="10" fill="#3182F610"/>
+    <text x="32" y="1061" font-family="Arial" font-size="22" font-weight="bold" fill="#3182F6">D-12</text>
+    <text x="112" y="1053" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">DMC 파크뷰자이</text>
+    <text x="112" y="1083" font-family="Arial" font-size="22" fill="#8B95A1">서울 마포구 · 아파트</text>
+    <text x="960" y="1065" font-family="Arial" font-size="26" fill="#B0B8C1">›</text>
+  </g>
+
+  <!-- Bottom Nav Bar -->
+  <rect y="1770" width="1080" height="150" fill="#FFFFFF"/>
+  <line x1="0" y1="1770" x2="1080" y2="1770" stroke="#F2F4F6" stroke-width="2"/>
+  <!-- Home (active) -->
+  <text x="108" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#3182F6">🏠</text>
+  <text x="108" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#3182F6" font-weight="bold">홈</text>
+  <!-- 시세 -->
+  <text x="324" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">📊</text>
+  <text x="324" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">시세</text>
+  <!-- 내 계약 -->
+  <text x="540" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">📄</text>
+  <text x="540" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">내 계약</text>
+  <!-- 청약 -->
+  <text x="756" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">🏢</text>
+  <text x="756" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">청약</text>
+  <!-- 설정 -->
+  <text x="972" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">⚙️</text>
+  <text x="972" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">설정</text>
+</svg>

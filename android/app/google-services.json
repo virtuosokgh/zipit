@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129077171334",
+    "project_id": "zipit-a126f",
+    "storage_bucket": "zipit-a126f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129077171334:android:c48c8f47dce7f3449aad07",
+        "android_client_info": {
+          "package_name": "com.zipit.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC40PHHtne6EasPDX-Qp-47e_7P4DyF4fE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

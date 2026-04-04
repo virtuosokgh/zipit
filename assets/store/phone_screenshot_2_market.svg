@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#F9FAFB"/>
+
+  <!-- Status Bar -->
+  <rect width="1080" height="88" fill="#FFFFFF"/>
+  <text x="50" y="60" font-family="Arial" font-size="28" fill="#191F28">9:41</text>
+  <text x="930" y="60" font-family="Arial" font-size="24" fill="#191F28">100%</text>
+
+  <!-- AppBar -->
+  <rect y="88" width="1080" height="112" fill="#FFFFFF"/>
+  <text x="50" y="160" font-family="Arial" font-size="40" font-weight="bold" fill="#191F28">시세</text>
+  <text x="980" y="160" font-family="Arial" font-size="36" fill="#8B95A1">🔔</text>
+
+  <!-- Search Bar -->
+  <g transform="translate(40, 220)">
+    <rect x="0" y="0" width="1000" height="56" rx="12" fill="#F2F4F6"/>
+    <text x="20" y="37" font-family="Arial" font-size="26" fill="#B0B8C1">🔍 아파트명, 주소 검색</text>
+  </g>
+
+  <!-- Filter Bar -->
+  <g transform="translate(40, 296)">
+    <rect x="0" y="0" width="200" height="44" rx="22" fill="#3182F6"/>
+    <text x="100" y="30" font-family="Arial" font-size="24" fill="#FFFFFF" text-anchor="middle" font-weight="bold">아파트</text>
+    <rect x="216" y="0" width="200" height="44" rx="22" fill="#F2F4F6"/>
+    <text x="316" y="30" font-family="Arial" font-size="24" fill="#8B95A1" text-anchor="middle">오피스텔</text>
+    <rect x="432" y="0" width="200" height="44" rx="22" fill="#F2F4F6"/>
+    <text x="532" y="30" font-family="Arial" font-size="24" fill="#8B95A1" text-anchor="middle">빌라</text>
+  </g>
+
+  <!-- Region Filter -->
+  <g transform="translate(40, 360)">
+    <rect x="0" y="0" width="1000" height="50" rx="8" fill="#FFFFFF"/>
+    <text x="16" y="34" font-family="Arial" font-size="24" fill="#4E5968">서울특별시 · 강남구</text>
+    <text x="940" y="34" font-family="Arial" font-size="20" fill="#8B95A1">변경 ›</text>
+  </g>
+
+  <!-- Price Chart -->
+  <g transform="translate(40, 440)">
+    <text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold" fill="#191F28">평균 매매가 추이</text>
+    <text x="800" y="30" font-family="Arial" font-size="22" fill="#8B95A1">최근 6개월</text>
+    <rect x="0" y="50" width="1000" height="280" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <!-- Y axis -->
+    <text x="16" y="90" font-family="Arial" font-size="18" fill="#B0B8C1">25억</text>
+    <text x="16" y="150" font-family="Arial" font-size="18" fill="#B0B8C1">20억</text>
+    <text x="16" y="210" font-family="Arial" font-size="18" fill="#B0B8C1">15억</text>
+    <text x="16" y="270" font-family="Arial" font-size="18" fill="#B0B8C1">10억</text>
+    <!-- Grid lines -->
+    <line x1="80" y1="83" x2="980" y2="83" stroke="#F2F4F6" stroke-width="1"/>
+    <line x1="80" y1="143" x2="980" y2="143" stroke="#F2F4F6" stroke-width="1"/>
+    <line x1="80" y1="203" x2="980" y2="203" stroke="#F2F4F6" stroke-width="1"/>
+    <line x1="80" y1="263" x2="980" y2="263" stroke="#F2F4F6" stroke-width="1"/>
+    <!-- Chart line -->
+    <polyline points="80,240 230,220 380,200 530,185 680,160 830,140 980,120" fill="none" stroke="#3182F6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="980" cy="120" r="8" fill="#3182F6"/>
+    <!-- X axis labels -->
+    <text x="80" y="303" font-family="Arial" font-size="18" fill="#B0B8C1" text-anchor="middle">10월</text>
+    <text x="230" y="303" font-family="Arial" font-size="18" fill="#B0B8C1" text-anchor="middle">11월</text>
+    <text x="380" y="303" font-family="Arial" font-size="18" fill="#B0B8C1" text-anchor="middle">12월</text>
+    <text x="530" y="303" font-family="Arial" font-size="18" fill="#B0B8C1" text-anchor="middle">1월</text>
+    <text x="680" y="303" font-family="Arial" font-size="18" fill="#B0B8C1" text-anchor="middle">2월</text>
+    <text x="980" y="303" font-family="Arial" font-size="18" fill="#3182F6" text-anchor="middle" font-weight="bold">3월</text>
+  </g>
+
+  <!-- Ranking Header -->
+  <g transform="translate(40, 800)">
+    <text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold" fill="#191F28">실거래 순위</text>
+  </g>
+
+  <!-- Apartment List -->
+  <g transform="translate(40, 850)">
+    <!-- Item 1 -->
+    <rect x="0" y="0" width="1000" height="110" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <text x="24" y="40" font-family="Arial" font-size="32" font-weight="bold" fill="#3182F6">1</text>
+    <text x="64" y="42" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">래미안 퍼스티지</text>
+    <text x="64" y="72" font-family="Arial" font-size="22" fill="#8B95A1">84㎡ 기준</text>
+    <text x="850" y="42" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">24.5억</text>
+    <text x="900" y="72" font-family="Arial" font-size="20" fill="#FF4545">▲ 1.2억</text>
+
+    <!-- Item 2 -->
+    <rect x="0" y="126" width="1000" height="110" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <text x="24" y="166" font-family="Arial" font-size="32" font-weight="bold" fill="#3182F6">2</text>
+    <text x="64" y="168" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">반포자이</text>
+    <text x="64" y="198" font-family="Arial" font-size="22" fill="#8B95A1">84㎡ 기준</text>
+    <text x="850" y="168" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">22.8억</text>
+    <text x="900" y="198" font-family="Arial" font-size="20" fill="#FF4545">▲ 0.8억</text>
+
+    <!-- Item 3 -->
+    <rect x="0" y="252" width="1000" height="110" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <text x="24" y="292" font-family="Arial" font-size="32" font-weight="bold" fill="#3182F6">3</text>
+    <text x="64" y="294" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">아크로리버파크</text>
+    <text x="64" y="324" font-family="Arial" font-size="22" fill="#8B95A1">114㎡ 기준</text>
+    <text x="850" y="294" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">36.0억</text>
+    <text x="900" y="324" font-family="Arial" font-size="20" fill="#FF4545">▲ 2.1억</text>
+
+    <!-- Item 4 -->
+    <rect x="0" y="378" width="1000" height="110" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <text x="24" y="418" font-family="Arial" font-size="32" font-weight="bold" fill="#3182F6">4</text>
+    <text x="64" y="420" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">삼성 래미안</text>
+    <text x="64" y="450" font-family="Arial" font-size="22" fill="#8B95A1">59㎡ 기준</text>
+    <text x="850" y="420" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">18.2억</text>
+    <text x="900" y="450" font-family="Arial" font-size="20" fill="#FF4545">▲ 0.5억</text>
+
+    <!-- Item 5 -->
+    <rect x="0" y="504" width="1000" height="110" rx="16" fill="#FFFFFF" stroke="#F2F4F6" stroke-width="2"/>
+    <text x="24" y="544" font-family="Arial" font-size="32" font-weight="bold" fill="#3182F6">5</text>
+    <text x="64" y="546" font-family="Arial" font-size="28" font-weight="bold" fill="#191F28">역삼 센트럴 푸르지오</text>
+    <text x="64" y="576" font-family="Arial" font-size="22" fill="#8B95A1">84㎡ 기준</text>
+    <text x="850" y="546" font-family="Arial" font-size="28" font-weight="bold" fill="#3182F6">15.8억</text>
+    <text x="900" y="576" font-family="Arial" font-size="20" fill="#2BD97C">▼ 0.3억</text>
+  </g>
+
+  <!-- Bottom Nav Bar -->
+  <rect y="1770" width="1080" height="150" fill="#FFFFFF"/>
+  <line x1="0" y1="1770" x2="1080" y2="1770" stroke="#F2F4F6" stroke-width="2"/>
+  <text x="108" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">🏠</text>
+  <text x="108" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">홈</text>
+  <text x="324" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#3182F6">📊</text>
+  <text x="324" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#3182F6" font-weight="bold">시세</text>
+  <text x="540" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">📄</text>
+  <text x="540" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">내 계약</text>
+  <text x="756" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">🏢</text>
+  <text x="756" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">청약</text>
+  <text x="972" y="1820" font-family="Arial" font-size="36" text-anchor="middle" fill="#8B95A1">⚙️</text>
+  <text x="972" y="1858" font-family="Arial" font-size="20" text-anchor="middle" fill="#8B95A1">설정</text>
+</svg>

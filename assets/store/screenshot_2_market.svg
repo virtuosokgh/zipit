@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EBF3FE"/>
+      <stop offset="100%" stop-color="#D6E6FD"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Top title -->
+  <text x="540" y="160" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">지역별 시세를</text>
+  <text x="540" y="230" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">비교해 보세요</text>
+
+  <!-- Phone frame -->
+  <rect x="90" y="320" width="900" height="1520" rx="48" ry="48" fill="#1a1a1a"/>
+  <rect x="102" y="332" width="876" height="1496" rx="40" ry="40" fill="white"/>
+
+  <!-- Status bar -->
+  <text x="160" y="382" font-family="SF Pro, Helvetica" font-size="28" font-weight="600" fill="#333">9:41</text>
+  <rect x="900" y="366" width="30" height="14" rx="3" fill="#333"/>
+
+  <!-- App header -->
+  <rect x="102" y="412" width="876" height="100" fill="white"/>
+  <text x="540" y="478" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="36" font-weight="700" fill="#222" text-anchor="middle">시세</text>
+
+  <!-- Filter tabs -->
+  <rect x="140" y="540" width="180" height="56" rx="28" fill="#2B4C7E"/>
+  <text x="230" y="576" font-family="Apple SD Gothic Neo" font-size="26" font-weight="600" fill="white" text-anchor="middle">아파트</text>
+  <rect x="340" y="540" width="180" height="56" rx="28" fill="#F0F0F0"/>
+  <text x="430" y="576" font-family="Apple SD Gothic Neo" font-size="26" fill="#666" text-anchor="middle">오피스텔</text>
+  <rect x="540" y="540" width="180" height="56" rx="28" fill="#F0F0F0"/>
+  <text x="630" y="576" font-family="Apple SD Gothic Neo" font-size="26" fill="#666" text-anchor="middle">빌라</text>
+
+  <!-- Area selector -->
+  <rect x="140" y="630" width="800" height="60" rx="12" fill="#F8F9FA" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="180" y="668" font-family="Apple SD Gothic Neo" font-size="26" fill="#333">서울특별시 › 강남구</text>
+  <text x="900" y="668" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="end">변경 ›</text>
+
+  <!-- Price chart area -->
+  <rect x="140" y="720" width="800" height="320" rx="16" fill="white" stroke="#E8E8E8" stroke-width="1.5"/>
+  <text x="180" y="770" font-family="Apple SD Gothic Neo" font-size="28" font-weight="700" fill="#222">평균 매매가 추이</text>
+  <text x="860" y="770" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="end">최근 6개월</text>
+
+  <!-- Chart line -->
+  <polyline points="200,960 320,930 440,900 560,880 680,850 800,820 880,790" fill="none" stroke="#2B4C7E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="880" cy="790" r="8" fill="#2B4C7E"/>
+  <!-- Chart area fill -->
+  <polygon points="200,960 320,930 440,900 560,880 680,850 800,820 880,790 880,1000 200,1000" fill="#2B4C7E" opacity="0.08"/>
+  <!-- Y axis labels -->
+  <text x="180" y="810" font-family="SF Pro" font-size="20" fill="#999">20억</text>
+  <text x="180" y="880" font-family="SF Pro" font-size="20" fill="#999">15억</text>
+  <text x="180" y="950" font-family="SF Pro" font-size="20" fill="#999">10억</text>
+  <!-- X axis labels -->
+  <text x="320" y="1020" font-family="SF Pro" font-size="18" fill="#999" text-anchor="middle">10월</text>
+  <text x="560" y="1020" font-family="SF Pro" font-size="18" fill="#999" text-anchor="middle">12월</text>
+  <text x="800" y="1020" font-family="SF Pro" font-size="18" fill="#999" text-anchor="middle">2월</text>
+
+  <!-- Ranking section -->
+  <text x="170" y="1110" font-family="Apple SD Gothic Neo" font-size="32" font-weight="700" fill="#222">실거래 순위</text>
+
+  <!-- Rank items -->
+  <rect x="140" y="1140" width="800" height="100" rx="12" fill="white" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="180" y="1200" font-family="SF Pro" font-size="30" font-weight="800" fill="#2B4C7E">1</text>
+  <text x="230" y="1188" font-family="Apple SD Gothic Neo" font-size="28" font-weight="600" fill="#222">래미안 퍼스티지</text>
+  <text x="230" y="1222" font-family="Apple SD Gothic Neo" font-size="22" fill="#666">84㎡ 기준</text>
+  <text x="900" y="1200" font-family="Apple SD Gothic Neo" font-size="28" font-weight="700" fill="#2B4C7E" text-anchor="end">24.5억</text>
+
+  <rect x="140" y="1260" width="800" height="100" rx="12" fill="white" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="180" y="1320" font-family="SF Pro" font-size="30" font-weight="800" fill="#2B4C7E">2</text>
+  <text x="230" y="1308" font-family="Apple SD Gothic Neo" font-size="28" font-weight="600" fill="#222">반포자이</text>
+  <text x="230" y="1342" font-family="Apple SD Gothic Neo" font-size="22" fill="#666">84㎡ 기준</text>
+  <text x="900" y="1320" font-family="Apple SD Gothic Neo" font-size="28" font-weight="700" fill="#2B4C7E" text-anchor="end">22.8억</text>
+
+  <rect x="140" y="1380" width="800" height="100" rx="12" fill="white" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="180" y="1440" font-family="SF Pro" font-size="30" font-weight="800" fill="#2B4C7E">3</text>
+  <text x="230" y="1428" font-family="Apple SD Gothic Neo" font-size="28" font-weight="600" fill="#222">아크로리버파크</text>
+  <text x="230" y="1462" font-family="Apple SD Gothic Neo" font-size="22" fill="#666">84㎡ 기준</text>
+  <text x="900" y="1440" font-family="Apple SD Gothic Neo" font-size="28" font-weight="700" fill="#2B4C7E" text-anchor="end">21.3억</text>
+
+  <rect x="140" y="1500" width="800" height="100" rx="12" fill="white" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="180" y="1560" font-family="SF Pro" font-size="30" font-weight="800" fill="#4A6FA1">4</text>
+  <text x="230" y="1548" font-family="Apple SD Gothic Neo" font-size="28" font-weight="600" fill="#222">삼성 래미안</text>
+  <text x="230" y="1582" font-family="Apple SD Gothic Neo" font-size="22" fill="#666">59㎡ 기준</text>
+  <text x="900" y="1560" font-family="Apple SD Gothic Neo" font-size="28" font-weight="700" fill="#2B4C7E" text-anchor="end">18.2억</text>
+
+  <!-- Bottom nav -->
+  <rect x="102" y="1688" width="876" height="140" fill="white"/>
+  <line x1="102" y1="1688" x2="978" y2="1688" stroke="#E8E8E8" stroke-width="1"/>
+  <circle cx="246" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="246" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">홈</text>
+  <circle cx="432" cy="1728" r="16" fill="#2B4C7E"/>
+  <text x="432" y="1776" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#2B4C7E" text-anchor="middle">시세</text>
+  <circle cx="618" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="618" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">청약</text>
+  <circle cx="804" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="804" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">설정</text>
+</svg>

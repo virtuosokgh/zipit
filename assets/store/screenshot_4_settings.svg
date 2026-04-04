@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EBF3FE"/>
+      <stop offset="100%" stop-color="#D6E6FD"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Top title -->
+  <text x="540" y="160" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">나만의 설정으로</text>
+  <text x="540" y="230" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="52" font-weight="800" fill="#2B4C7E" text-anchor="middle">맞춤 정보를 받으세요</text>
+
+  <!-- Phone frame -->
+  <rect x="90" y="320" width="900" height="1520" rx="48" ry="48" fill="#1a1a1a"/>
+  <rect x="102" y="332" width="876" height="1496" rx="40" ry="40" fill="#F8F9FA"/>
+
+  <!-- Status bar -->
+  <rect x="102" y="332" width="876" height="80" rx="40" ry="0" fill="white"/>
+  <text x="160" y="382" font-family="SF Pro, Helvetica" font-size="28" font-weight="600" fill="#333">9:41</text>
+  <rect x="900" y="366" width="30" height="14" rx="3" fill="#333"/>
+
+  <!-- App header -->
+  <rect x="102" y="412" width="876" height="100" fill="white"/>
+  <text x="540" y="478" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="36" font-weight="700" fill="#222" text-anchor="middle">설정</text>
+
+  <!-- Profile section -->
+  <rect x="102" y="540" width="876" height="160" fill="white"/>
+  <circle cx="220" cy="620" r="45" fill="#EBF3FE"/>
+  <text x="220" y="632" font-family="Apple SD Gothic Neo" font-size="36" fill="#2B4C7E" text-anchor="middle">U</text>
+  <text x="300" y="605" font-family="Apple SD Gothic Neo" font-size="32" font-weight="700" fill="#222">사용자님</text>
+  <text x="300" y="645" font-family="Apple SD Gothic Neo" font-size="24" fill="#888">user@example.com</text>
+  <text x="900" y="625" font-family="Apple SD Gothic Neo" font-size="24" fill="#999" text-anchor="end">›</text>
+
+  <!-- Notification section -->
+  <rect x="140" y="740" width="200" height="32" rx="0" fill="transparent"/>
+  <text x="160" y="764" font-family="Apple SD Gothic Neo" font-size="24" font-weight="600" fill="#888">알림 설정</text>
+
+  <rect x="102" y="790" width="876" height="80" fill="white"/>
+  <text x="180" y="840" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">실거래가 알림</text>
+  <!-- Toggle on -->
+  <rect x="840" y="815" width="56" height="32" rx="16" fill="#2B4C7E"/>
+  <circle cx="876" cy="831" r="13" fill="white"/>
+
+  <rect x="102" y="872" width="876" height="80" fill="white"/>
+  <text x="180" y="922" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">청약 일정 알림</text>
+  <rect x="840" y="897" width="56" height="32" rx="16" fill="#2B4C7E"/>
+  <circle cx="876" cy="913" r="13" fill="white"/>
+
+  <rect x="102" y="954" width="876" height="80" fill="white"/>
+  <text x="180" y="1004" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">관심 단지 가격 변동</text>
+  <rect x="840" y="979" width="56" height="32" rx="16" fill="#CCCCCC"/>
+  <circle cx="860" cy="995" r="13" fill="white"/>
+
+  <!-- Region section -->
+  <text x="160" y="1094" font-family="Apple SD Gothic Neo" font-size="24" font-weight="600" fill="#888">관심 지역</text>
+
+  <rect x="102" y="1112" width="876" height="80" fill="white"/>
+  <text x="180" y="1162" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">관심 지역 관리</text>
+  <text x="900" y="1162" font-family="Apple SD Gothic Neo" font-size="24" fill="#999" text-anchor="end">3개 ›</text>
+
+  <!-- General section -->
+  <text x="160" y="1252" font-family="Apple SD Gothic Neo" font-size="24" font-weight="600" fill="#888">일반</text>
+
+  <rect x="102" y="1270" width="876" height="80" fill="white"/>
+  <text x="180" y="1320" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">다크 모드</text>
+  <rect x="840" y="1295" width="56" height="32" rx="16" fill="#CCCCCC"/>
+  <circle cx="860" cy="1311" r="13" fill="white"/>
+
+  <rect x="102" y="1352" width="876" height="80" fill="white"/>
+  <text x="180" y="1402" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">앱 버전</text>
+  <text x="900" y="1402" font-family="Apple SD Gothic Neo" font-size="24" fill="#999" text-anchor="end">1.0.0</text>
+
+  <rect x="102" y="1434" width="876" height="80" fill="white"/>
+  <text x="180" y="1484" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">이용약관</text>
+  <text x="900" y="1484" font-family="Apple SD Gothic Neo" font-size="24" fill="#999" text-anchor="end">›</text>
+
+  <rect x="102" y="1516" width="876" height="80" fill="white"/>
+  <text x="180" y="1566" font-family="Apple SD Gothic Neo" font-size="28" fill="#222">개인정보 처리방침</text>
+  <text x="900" y="1566" font-family="Apple SD Gothic Neo" font-size="24" fill="#999" text-anchor="end">›</text>
+
+  <rect x="102" y="1598" width="876" height="80" fill="white"/>
+  <text x="540" y="1648" font-family="Apple SD Gothic Neo" font-size="28" fill="#FF4444" text-anchor="middle">로그아웃</text>
+
+  <!-- Bottom nav -->
+  <rect x="102" y="1688" width="876" height="140" fill="white"/>
+  <line x1="102" y1="1688" x2="978" y2="1688" stroke="#E8E8E8" stroke-width="1"/>
+  <circle cx="246" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="246" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">홈</text>
+  <circle cx="432" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="432" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">시세</text>
+  <circle cx="618" cy="1728" r="16" fill="none" stroke="#999" stroke-width="2.5"/>
+  <text x="618" y="1776" font-family="Apple SD Gothic Neo" font-size="22" fill="#999" text-anchor="middle">청약</text>
+  <circle cx="804" cy="1728" r="16" fill="#2B4C7E"/>
+  <text x="804" y="1776" font-family="Apple SD Gothic Neo" font-size="22" font-weight="600" fill="#2B4C7E" text-anchor="middle">설정</text>
+</svg>
