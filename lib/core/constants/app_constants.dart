@@ -146,8 +146,8 @@ class AppConstants {
   static const int defaultBuildingAge = 20;
 
   // ─── 금융 비율 ───
-  /// 전세보증보험 한도 비율 (시세 대비)
-  static const double jeonseInsuranceLimitRatio = 0.8;
+  /// 전세보증보험 한도 비율 (KB시세 대비 90%, 현재는 실거래 평균가 기준)
+  static const double jeonseInsuranceLimitRatio = 0.9;
 
   /// 월세 보증금 환산 계수 (1000만원당 월 5만원)
   static const double monthlyRentConversionFactor = 200;

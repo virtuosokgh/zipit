@@ -54,16 +54,18 @@ class ApartmentListing {
     return jeonse.first.price;
   }
 
-  /// 안전 보증금 = min(보증보험 한도=시세80%, 최근1년 최저 전세가)
+  /// 안전 보증금 = max(전세보증보험 한도, 3개월내 전세 최저가)
+  /// - 보험 한도 >= 전세 최저가 → 보험이 커버 가능 → 보험 한도가 안전금
+  /// - 보험 한도 < 전세 최저가 → 시세 자체가 높음 → 전세 최저가가 안전금
   int? get safeJeonsePrice {
-    final oneYearAgo = DateTime.now().subtract(const Duration(days: 365));
+    final threeMonthsAgo = DateTime.now().subtract(const Duration(days: 90));
     final recent = tradeHistory
-        .where((t) => t.type == TradeType.jeonse && t.date.isAfter(oneYearAgo))
+        .where((t) => t.type == TradeType.jeonse && t.date.isAfter(threeMonthsAgo))
         .toList();
     if (recent.isEmpty) return null;
     final lowest = recent.map((t) => t.price).reduce((a, b) => a < b ? a : b);
     final insuranceLimit = (currentPrice * AppConstants.jeonseInsuranceLimitRatio).toInt();
-    return lowest < insuranceLimit ? lowest : insuranceLimit;
+    return insuranceLimit >= lowest ? insuranceLimit : lowest;
   }
 
   /// 전세 안전도 점수 (안전 보증금 - 현재 전세가, 양수=안전, 음수=위험)

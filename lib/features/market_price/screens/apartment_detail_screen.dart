@@ -107,25 +107,24 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
   }
 
   /// 안전 전세금 계산
-  /// = min(전세보증보험 한도, 최근 1년 전세금 중 최저)
-  /// 전세보증보험 한도: HUG 기준 시세의 150% 이하 → 시세의 80% 수준으로 가정
+  /// = max(전세보증보험 한도, 최근 3개월 전세금 중 최저)
+  /// 전세보증보험 한도: KB시세(현재는 실거래 평균가) × 90%
   int? _safeJeonsePrice(ApartmentListing apt) {
     final selectedUnit = apt.units[_selectedUnitIndex];
-    final oneYearAgo = DateTime.now().subtract(const Duration(days: 365));
+    final threeMonthsAgo = DateTime.now().subtract(const Duration(days: 90));
     final recentJeonse = apt.tradeHistory
         .where((t) =>
             t.type == TradeType.jeonse &&
             (t.area - selectedUnit.exclusiveArea).abs() < AppConstants.areaTolerance &&
-            t.date.isAfter(oneYearAgo))
+            t.date.isAfter(threeMonthsAgo))
         .toList();
 
     if (recentJeonse.isEmpty) return null;
 
     final lowestRecentJeonse = recentJeonse.map((t) => t.price).reduce((a, b) => a < b ? a : b);
-    // 전세보증보험 가입 가능 금액: 시세의 80%
     final insuranceLimit = (apt.currentPrice * AppConstants.jeonseInsuranceLimitRatio).toInt();
 
-    return lowestRecentJeonse < insuranceLimit ? lowestRecentJeonse : insuranceLimit;
+    return insuranceLimit >= lowestRecentJeonse ? insuranceLimit : lowestRecentJeonse;
   }
 
   /// 잠금화면에서 진입했는지 여부
@@ -824,7 +823,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  '전세보증보험 한도: ${PriceFormatter.format(insuranceLimit)}',
+                  '전세보증보험 가능 최대: ${PriceFormatter.format(insuranceLimit)} (시세×90%)',
                   style: AppTypography.caption2.copyWith(color: AppColors.textTertiary),
                 ),
               ],
