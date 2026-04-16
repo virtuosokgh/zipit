@@ -823,7 +823,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  '전세보증보험 가능 최대: ${PriceFormatter.format(insuranceLimit)} (시세×90%)',
+                  '전세보증보험 가능 최대: ${PriceFormatter.format(insuranceLimit)} (시세×88%)',
                   style: AppTypography.caption2.copyWith(color: AppColors.textTertiary),
                 ),
               ],
