@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer' as dev;
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/widget_config.dart';
@@ -74,7 +75,7 @@ class WidgetService {
         iOSName: _iosWidgetName,
       );
     } catch (e) {
-      // 위젯 업데이트 실패 시 무시
+      dev.log('위젯 업데이트 실패: $e', name: 'WidgetService');
     }
   }
 
@@ -82,7 +83,9 @@ class WidgetService {
   static Future<void> initialize() async {
     try {
       await HomeWidget.setAppGroupId('group.com.zipit.app');
-    } catch (_) {}
+    } catch (e) {
+      dev.log('위젯 초기화 실패: $e', name: 'WidgetService');
+    }
   }
 
   /// 위젯 비활성화 시 데이터 클리어
@@ -100,7 +103,9 @@ class WidgetService {
         qualifiedAndroidName: _qualifiedAndroidName,
         iOSName: _iosWidgetName,
       );
-    } catch (_) {}
+    } catch (e) {
+      dev.log('위젯 데이터 클리어 실패: $e', name: 'WidgetService');
+    }
   }
 }
 

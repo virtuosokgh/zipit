@@ -1,3 +1,4 @@
+import 'dart:developer' as dev;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../../../models/contract.dart';
@@ -40,8 +41,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
           .order('created_at', ascending: false);
 
       state = (data as List).map((json) => Contract.fromJson(json)).toList();
-    } catch (_) {
-      // 오프라인이거나 테이블이 없을 경우 로컬 상태 유지
+    } catch (e) {
+      dev.log('계약 목록 로드 실패: $e', name: 'Contract');
     }
   }
 
@@ -61,8 +62,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
       json['user_id'] = user.id;
       json['updated_at'] = DateTime.now().toIso8601String();
       await _supabase.from('contracts').insert(json);
-    } catch (_) {
-      // Supabase 실패 시 로컬 상태는 유지 (오프라인 지원)
+    } catch (e) {
+      dev.log('계약 추가 Supabase 저장 실패 (로컬 유지): $e', name: 'Contract');
     }
   }
 
@@ -82,8 +83,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
         'status': status.name,
         'updated_at': DateTime.now().toIso8601String(),
       }).eq('id', id);
-    } catch (_) {
-      // 오프라인 시 로컬 상태 유지
+    } catch (e) {
+      dev.log('계약 상태 Supabase 업데이트 실패: $e', name: 'Contract');
     }
   }
 
@@ -110,8 +111,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
         'checklist': newChecklist.map((item) => item.toJson()).toList(),
         'updated_at': DateTime.now().toIso8601String(),
       }).eq('id', contractId);
-    } catch (_) {
-      // 오프라인 시 로컬 상태 유지
+    } catch (e) {
+      dev.log('체크리스트 Supabase 업데이트 실패: $e', name: 'Contract');
     }
   }
 
@@ -125,8 +126,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
 
     try {
       await _supabase.from('contracts').delete().eq('id', id);
-    } catch (_) {
-      // 실패 시 이전 상태 복원
+    } catch (e) {
+      dev.log('계약 삭제 실패, 로컬 상태 복원: $e', name: 'Contract');
       state = previous;
     }
   }
@@ -145,8 +146,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
       final json = contract.toJson();
       json['updated_at'] = DateTime.now().toIso8601String();
       await _supabase.from('contracts').update(json).eq('id', contract.id);
-    } catch (_) {
-      // 오프라인 시 로컬 상태 유지
+    } catch (e) {
+      dev.log('계약 업데이트 실패: $e', name: 'Contract');
     }
   }
 
@@ -196,8 +197,8 @@ class ContractsNotifier extends StateNotifier<List<Contract>> {
         dbField: date?.toIso8601String(),
         'updated_at': DateTime.now().toIso8601String(),
       }).eq('id', id);
-    } catch (_) {
-      // 오프라인 시 로컬 상태 유지
+    } catch (e) {
+      dev.log('단계별 날짜 업데이트 실패: $e', name: 'Contract');
     }
   }
 

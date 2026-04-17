@@ -1,3 +1,4 @@
+import 'dart:developer' as dev;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/user_profile.dart';
@@ -58,8 +59,9 @@ class UserProfileNotifier extends StateNotifier<UserProfile?> {
           isMarried: data['is_married'] as bool?,
         );
       }
-    } catch (_) {
-      // 프로필이 없을 수 있음 (신규 가입 직후)
+    } catch (e) {
+      // 프로필이 없을 수 있음 (신규 가입 직후) 또는 네트워크 오류
+      dev.log('프로필 로드 실패: $e', name: 'AuthProvider');
     }
   }
 

@@ -1,6 +1,7 @@
 import 'dart:developer' as dev;
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -17,7 +18,6 @@ class NotificationService {
   static const String _subscriptionChannelName = '청약 알림';
   static const String _lockScreenChannelId = 'zipit_lockscreen';
   static const String _lockScreenChannelName = '잠금화면 시세 알림';
-  static const int _lockScreenNotificationId = 9999;
 
   /// Initialize the notification service. Call in main.dart before runApp.
   static Future<void> initialize() async {
@@ -70,9 +70,24 @@ class NotificationService {
           playSound: false,
         ),
       );
-      // Request exact alarm permission (Android 13+)
-      await androidPlugin.requestExactAlarmsPermission();
+      // 알람 권한은 초기 실행 시 1회만 요청 (매번 설정화면 리다이렉트 방지)
+      final prefs = await SharedPreferences.getInstance();
+      const key = 'exact_alarm_permission_requested';
+      if (prefs.getBool(key) != true) {
+        await prefs.setBool(key, true);
+        await androidPlugin.requestExactAlarmsPermission();
+      }
     }
+  }
+
+  /// 실제 알림 예약이 필요할 때 권한 요청 (설정화면 열림)
+  static Future<bool> ensureExactAlarmPermission() async {
+    final androidPlugin = _plugin
+        .resolvePlatformSpecificImplementation<
+            AndroidFlutterLocalNotificationsPlugin>();
+    if (androidPlugin == null) return true;
+    final granted = await androidPlugin.requestExactAlarmsPermission();
+    return granted ?? false;
   }
 
   /// Generate a consistent notification ID from a string.
@@ -324,7 +339,9 @@ class NotificationService {
         'dates': dates.take(3).toList(),
         'regionCodes': regionCodes.take(3).toList(),
       });
-    } catch (_) {}
+    } catch (e) {
+      dev.log('잠금화면 활성화 실패: $e', name: 'NotificationService');
+    }
   }
 
   /// 잠금화면 데이터 업데이트 (서비스가 이미 실행 중일 때)
@@ -343,7 +360,9 @@ class NotificationService {
         'prices': prices.take(3).toList(),
         'dates': dates.take(3).toList(),
       });
-    } catch (_) {}
+    } catch (e) {
+      dev.log('잠금화면 업데이트 실패: $e', name: 'NotificationService');
+    }
   }
 
   /// 잠금화면 비활성화
@@ -351,6 +370,8 @@ class NotificationService {
     try {
       const channel = MethodChannel('com.zipit.app/lockscreen');
       await channel.invokeMethod('disableLockScreen');
-    } catch (_) {}
+    } catch (e) {
+      dev.log('잠금화면 비활성화 실패: $e', name: 'NotificationService');
+    }
   }
 }

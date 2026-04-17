@@ -1,3 +1,4 @@
+import 'dart:developer' as dev;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -76,7 +77,9 @@ class _ZipitAppState extends State<ZipitApp> {
         await Future.delayed(const Duration(milliseconds: AppConstants.refreshDelayMs));
         _handleLockScreenRoute(route);
       }
-    } catch (_) {}
+    } catch (e) {
+      dev.log('pending route 확인 실패: $e', name: 'main');
+    }
   }
 
   void _handleLockScreenRoute(String route) {

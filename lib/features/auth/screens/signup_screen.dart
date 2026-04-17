@@ -50,12 +50,27 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
 
     setState(() => _isLoading = true);
     try {
-      await signup(
+      final response = await signup(
         email: _emailController.text.trim(),
         password: _passwordController.text,
       );
 
-      // 프로필 저장
+      // 이메일 확인이 필요한 경우: 세션 없이 반환됨
+      if (response.session == null) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('회원가입 완료! 이메일로 받으신 인증 링크를 확인해주세요.'),
+              backgroundColor: AppColors.primary,
+              duration: Duration(seconds: 4),
+            ),
+          );
+          context.go('/login');
+        }
+        return;
+      }
+
+      // 프로필 저장 (세션이 있는 경우에만)
       final depositCount = int.tryParse(_depositCountController.text.trim());
       final profile = UserProfile(
         email: _emailController.text.trim(),
@@ -99,35 +114,6 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
-  }
-
-  void _showVerificationDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSpacing.cardRadius),
-        ),
-        title: const Text('인증 메일을 보냈어요', style: AppTypography.heading3),
-        content: Text(
-          '${_emailController.text.trim()}으로 인증 메일을 보냈어요.\n메일을 확인하고 인증을 완료해주세요.',
-          style: AppTypography.body2.copyWith(color: AppColors.textSecondary),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-              context.go('/home');
-            },
-            child: Text(
-              '확인',
-              style: AppTypography.label2.copyWith(color: AppColors.primary),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 
   @override

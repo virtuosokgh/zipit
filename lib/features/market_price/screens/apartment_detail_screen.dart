@@ -237,6 +237,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
       apt = ApartmentListing(
         name: apt.name,
         location: apt.location,
+        address: apt.address,
         currentPrice: apt.currentPrice,
         aiEstimate: apt.aiEstimate,
         priceGap: apt.priceGap,
@@ -337,7 +338,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: PeriodFilter.values.length,
-        separatorBuilder: (_, __) => const SizedBox(width: 6),
+        separatorBuilder: (_, _) => const SizedBox(width: 6),
         itemBuilder: (_, i) {
           final filter = PeriodFilter.values[i];
           final isSelected = _periodFilter == filter;
@@ -841,7 +842,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
     final displayAddress = addressAsync.when(
       data: (address) => address.isNotEmpty ? address : apt.location,
       loading: () => apt.location,
-      error: (_, __) => apt.location,
+      error: (_, _) => apt.location,
     );
 
     return Container(
@@ -915,7 +916,7 @@ class _ApartmentDetailScreenState extends ConsumerState<ApartmentDetailScreen> {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: apt.units.length,
-        separatorBuilder: (_, __) => const SizedBox(width: AppSpacing.sm),
+        separatorBuilder: (_, _) => const SizedBox(width: AppSpacing.sm),
         itemBuilder: (_, i) {
           final unit = apt.units[i];
           final isSelected = _selectedUnitIndex == i;

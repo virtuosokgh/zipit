@@ -15,6 +15,12 @@ class ApartmentListing {
   final List<ApartmentUnit> units;       // 평형 목록
   final List<TradeHistory> tradeHistory; // 거래 이력
 
+  // 성능 최적화: 최신 전세/월세 거래 캐싱 (getter 반복 호출 방지)
+  TradeHistory? _latestJeonse;
+  TradeHistory? _latestMonthly;
+  bool _latestJeonseCached = false;
+  bool _latestMonthlyCached = false;
+
   ApartmentListing({
     required this.name,
     required this.location,
@@ -28,6 +34,32 @@ class ApartmentListing {
     required this.units,
     required this.tradeHistory,
   });
+
+  /// 캐싱된 최신 전세 거래 조회
+  TradeHistory? _getLatestJeonse() {
+    if (_latestJeonseCached) return _latestJeonse;
+    TradeHistory? latest;
+    for (final t in tradeHistory) {
+      if (t.type != TradeType.jeonse) continue;
+      if (latest == null || t.date.isAfter(latest.date)) latest = t;
+    }
+    _latestJeonse = latest;
+    _latestJeonseCached = true;
+    return latest;
+  }
+
+  /// 캐싱된 최신 월세 거래 조회
+  TradeHistory? _getLatestMonthly() {
+    if (_latestMonthlyCached) return _latestMonthly;
+    TradeHistory? latest;
+    for (final t in tradeHistory) {
+      if (t.type != TradeType.monthly) continue;
+      if (latest == null || t.date.isAfter(latest.date)) latest = t;
+    }
+    _latestMonthly = latest;
+    _latestMonthlyCached = true;
+    return latest;
+  }
 
   /// AI 추정가 vs 현재시세 비교 → 저평가/적정/고평가
   PriceSignal get priceSignal {
@@ -47,12 +79,7 @@ class ApartmentListing {
   double get aiGapPercent => ((aiEstimate - currentPrice) / currentPrice) * 100;
 
   /// 최근 전세가 (전체 평형 중 최신)
-  int? get latestJeonsePrice {
-    final jeonse = tradeHistory.where((t) => t.type == TradeType.jeonse).toList();
-    if (jeonse.isEmpty) return null;
-    jeonse.sort((a, b) => b.date.compareTo(a.date));
-    return jeonse.first.price;
-  }
+  int? get latestJeonsePrice => _getLatestJeonse()?.price;
 
   /// 안전 보증금 = max(전세보증보험 한도, 3개월내 전세 최저가)
   /// - 보험 한도 >= 전세 최저가 → 보험이 커버 가능 → 보험 한도가 안전금
@@ -77,20 +104,10 @@ class ApartmentListing {
   }
 
   /// 최근 월세 보증금
-  int? get latestMonthlyDeposit {
-    final monthly = tradeHistory.where((t) => t.type == TradeType.monthly).toList();
-    if (monthly.isEmpty) return null;
-    monthly.sort((a, b) => b.date.compareTo(a.date));
-    return monthly.first.price;
-  }
+  int? get latestMonthlyDeposit => _getLatestMonthly()?.price;
 
   /// 최근 월세금
-  int? get latestMonthlyRent {
-    final monthly = tradeHistory.where((t) => t.type == TradeType.monthly).toList();
-    if (monthly.isEmpty) return null;
-    monthly.sort((a, b) => b.date.compareTo(a.date));
-    return monthly.first.monthlyRent;
-  }
+  int? get latestMonthlyRent => _getLatestMonthly()?.monthlyRent;
 
   /// 월세 → 보증금 환산 (1000만원당 월 5만원)
   /// 총 환산 보증금 = 실보증금 + (월세 × 200)

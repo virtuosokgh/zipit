@@ -172,4 +172,8 @@ class AppConstants {
 
   /// 이용약관 URL
   static const String termsUrl = 'https://virtuosokgh.github.io/zipit-privacy/terms.html';
+
+  // ─── 앱 정보 ───
+  /// 앱 버전 (pubspec.yaml과 동기화)
+  static const String appVersion = '1.1.0';
 }

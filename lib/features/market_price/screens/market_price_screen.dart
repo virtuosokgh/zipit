@@ -256,7 +256,7 @@ class _MarketPriceScreenState extends ConsumerState<MarketPriceScreen> {
         return ListView.separated(
           padding: const EdgeInsets.all(AppSpacing.screenH),
           itemCount: results.length,
-          separatorBuilder: (_, __) => const Divider(),
+          separatorBuilder: (_, _) => const Divider(),
           itemBuilder: (_, i) {
             final r = results[i];
             return ListTile(

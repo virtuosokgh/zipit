@@ -237,7 +237,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                     height: 22,
                     child: Checkbox(
                       value: _lockScreenEnabled,
-                      onChanged: (v) => setState(() => _lockScreenEnabled = v ?? true),
+                      onChanged: (v) => setState(() => _lockScreenEnabled = v ?? false),
                       activeColor: AppColors.primary,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),

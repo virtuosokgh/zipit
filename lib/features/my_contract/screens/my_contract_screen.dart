@@ -43,7 +43,7 @@ class _MyContractScreenState extends ConsumerState<MyContractScreen> {
         backgroundColor: AppColors.background,
         body: Center(child: CircularProgressIndicator(color: AppColors.primary)),
       ),
-      error: (_, __) => Scaffold(
+      error: (_, _) => Scaffold(
         backgroundColor: AppColors.background,
         body: _loginPrompt(context),
       ),

@@ -26,6 +26,19 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     await Future.delayed(const Duration(milliseconds: AppConstants.refreshDelayMs));
   }
 
+  Future<void> _launchExternalUrl(String url) async {
+    final uri = Uri.parse(url);
+    final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('링크를 열 수 없어요. 네트워크를 확인해주세요.'),
+          backgroundColor: AppColors.error,
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final prefs = ref.watch(userPreferencesProvider);
@@ -77,17 +90,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
           _sectionHeader('계정'),
           _buildAccountSection(context),
-          _navTile('서비스 이용약관', () {
-            launchUrl(Uri.parse(AppConstants.termsUrl));
-          }),
-          _navTile('개인정보 처리방침', () {
-            launchUrl(Uri.parse(AppConstants.privacyPolicyUrl));
-          }),
+          _navTile('서비스 이용약관', () => _launchExternalUrl(AppConstants.termsUrl)),
+          _navTile('개인정보 처리방침', () => _launchExternalUrl(AppConstants.privacyPolicyUrl)),
 
           const SizedBox(height: AppSpacing.lg),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.screenH),
-            child: Text('집잇 v1.0.0', style: AppTypography.caption1, textAlign: TextAlign.center),
+            child: Text('집잇 v${AppConstants.appVersion}', style: AppTypography.caption1, textAlign: TextAlign.center),
           ),
           const SizedBox(height: AppSpacing.xxxl),
         ],
@@ -204,7 +213,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
     if (confirmed == true && mounted) {
       await logout();
-      if (mounted) context.go('/login');
+      if (!mounted) return;
+      this.context.go('/login');
     }
   }
 
@@ -441,7 +451,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                       Text('예산 범위', style: AppTypography.body2Bold),
                       const SizedBox(height: AppSpacing.sm),
                       Text(
-                        '${_budgetLabel(budgetMin, budgetMax)}',
+                        _budgetLabel(budgetMin, budgetMax),
                         style: AppTypography.body2.copyWith(color: AppColors.primary),
                       ),
                       RangeSlider(

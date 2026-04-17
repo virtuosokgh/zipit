@@ -108,7 +108,7 @@ class UserPreferences {
       budgetMax: (json['budgetMax'] ?? 50000).toDouble(),
       regions: regions,
       onboardingCompleted: json['onboardingCompleted'] ?? false,
-      lockScreenWidgetEnabled: json['lockScreenWidgetEnabled'] ?? true,
+      lockScreenWidgetEnabled: json['lockScreenWidgetEnabled'] ?? false,
       pushNotificationEnabled: json['pushNotificationEnabled'] ?? true,
       homeSubscriptionRegion: json['homeSubscriptionRegion'] ?? '',
       widgetInterestType: json['widgetInterestType'] ?? '',

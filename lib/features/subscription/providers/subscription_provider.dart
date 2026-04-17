@@ -18,7 +18,9 @@ int? _calcAutoScore(UserProfile? profile) {
   if (profile == null) return null;
   if (profile.noHouseYears == null &&
       profile.dependents == null &&
-      profile.accountYears == null) return null;
+      profile.accountYears == null) {
+    return null;
+  }
 
   final noHouseYears = profile.noHouseYears ?? 0;
   final dependents = profile.dependents ?? 0;
@@ -268,7 +270,7 @@ _FirstPriorityResult _checkFirstPriority({
   }
   final accountMonths = accountYears * 12;
   if (accountMonths < requiredMonths) {
-    return _FirstPriorityResult(false, '통장 가입기간 부족 (${accountMonths}개월/${requiredMonths}개월 필요)', 0.2);
+    return _FirstPriorityResult(false, '통장 가입기간 부족 ($accountMonths개월/$requiredMonths개월 필요)', 0.2);
   }
 
   // 납입횟수 확인 (국민주택)
@@ -281,7 +283,7 @@ _FirstPriorityResult _checkFirstPriority({
       requiredDeposit = AppConstants.depositCountOther;
     }
     if (depositCount < requiredDeposit) {
-      return _FirstPriorityResult(false, '납입횟수 부족 (${depositCount}회/${requiredDeposit}회 필요)', 0.3);
+      return _FirstPriorityResult(false, '납입횟수 부족 ($depositCount회/$requiredDeposit회 필요)', 0.3);
     }
   }
 
@@ -369,19 +371,19 @@ WinProbability calculateWinProbability({
 
       if (diff >= 15) {
         pts = maxPts;
-        desc = '가점 $userScore점 — $subRegionKey 평균 커트라인($cutline점) 대비 +${diff}점 (상위권)';
+        desc = '가점 $userScore점 — $subRegionKey 평균 커트라인($cutline점) 대비 +$diff점 (상위권)';
       } else if (diff >= 5) {
         pts = maxPts * 0.8;
-        desc = '가점 $userScore점 — 커트라인($cutline점) 소폭 상회 (+${diff}점)';
+        desc = '가점 $userScore점 — 커트라인($cutline점) 소폭 상회 (+$diff점)';
       } else if (diff >= 0) {
         pts = maxPts * 0.6;
         desc = '가점 $userScore점 — 커트라인($cutline점) 근접 (경쟁 치열)';
       } else if (diff >= -10) {
         pts = maxPts * 0.3;
-        desc = '가점 $userScore점 — 커트라인($cutline점) 미달 (${diff}점)';
+        desc = '가점 $userScore점 — 커트라인($cutline점) 미달 ($diff점)';
       } else {
         pts = maxPts * 0.1;
-        desc = '가점 $userScore점 — 커트라인($cutline점) 크게 미달 (${diff}점)';
+        desc = '가점 $userScore점 — 커트라인($cutline점) 크게 미달 ($diff점)';
       }
 
       details.add(ProbabilityFactor(
@@ -558,13 +560,13 @@ WinProbability calculateWinProbability({
       final depositCount = userProfile?.depositCount ?? 0;
       if (depositCount >= 120) {
         pts = maxPts;
-        desc = '순차제 — 납입 ${depositCount}회로 상위권';
+        desc = '순차제 — 납입 $depositCount회로 상위권';
       } else if (depositCount >= 60) {
         pts = maxPts * 0.6;
-        desc = '순차제 — 납입 ${depositCount}회로 중위권';
+        desc = '순차제 — 납입 $depositCount회로 중위권';
       } else if (depositCount > 0) {
         pts = maxPts * 0.3;
-        desc = '순차제 — 납입 ${depositCount}회로 하위권';
+        desc = '순차제 — 납입 $depositCount회로 하위권';
       } else {
         pts = maxPts * 0.2;
         desc = '순차제 (납입횟수 기준) — 납입 정보 미입력';

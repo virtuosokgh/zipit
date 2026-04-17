@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer' as dev;
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// 알림 내역 아이템
@@ -63,8 +64,18 @@ class NotificationHistoryService {
     final prefs = await SharedPreferences.getInstance();
     final json = prefs.getString(_key);
     if (json == null) return [];
-    final list = jsonDecode(json) as List;
-    return list.map((e) => NotificationItem.fromJson(e)).toList();
+    try {
+      final decoded = jsonDecode(json);
+      if (decoded is! List) return [];
+      return decoded
+          .whereType<Map<String, dynamic>>()
+          .map((e) => NotificationItem.fromJson(e))
+          .toList();
+    } catch (e) {
+      dev.log('알림 내역 파싱 실패, 초기화: $e', name: 'NotificationHistory');
+      await prefs.remove(_key);
+      return [];
+    }
   }
 
   /// 읽지 않은 알림 수

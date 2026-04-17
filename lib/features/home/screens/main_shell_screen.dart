@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
-import '../../../core/constants/app_typography.dart';
 import '../../../providers/notification_provider.dart';
 import '../../../providers/widget_data_updater.dart';
 
@@ -35,7 +34,7 @@ class MainShellScreen extends ConsumerWidget {
     final unreadCount = ref.watch(notificationHistoryProvider.notifier).unreadCount;
 
     // 위젯 데이터 자동 업데이트 (shell은 항상 마운트 → dispose 걱정 없음)
-    ref.listen(widgetDataUpdaterProvider, (_, __) {});
+    ref.listen(widgetDataUpdaterProvider, (_, _) {});
 
     return Scaffold(
       appBar: AppBar(

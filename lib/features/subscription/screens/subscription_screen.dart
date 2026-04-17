@@ -103,7 +103,7 @@ class _SubscriptionScreenState extends ConsumerState<SubscriptionScreen> {
                         style: AppTypography.caption1.copyWith(color: AppColors.textTertiary),
                       ),
                       loading: () => const SizedBox.shrink(),
-                      error: (_, __) => const SizedBox.shrink(),
+                      error: (_, _) => const SizedBox.shrink(),
                     ),
                     GestureDetector(
                       onTap: () => _showSortSheet(context),
@@ -131,7 +131,7 @@ class _SubscriptionScreenState extends ConsumerState<SubscriptionScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: AppSpacing.screenH),
                 sliver: SliverList(
                   delegate: SliverChildBuilderDelegate(
-                    (_, __) => const Padding(
+                    (_, _) => const Padding(
                       padding: EdgeInsets.only(bottom: AppSpacing.md),
                       child: ShimmerCard(),
                     ),
